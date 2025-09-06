@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home - BOLOGOX (Mapa em branco)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "nanoid": "https://cdn.jsdelivr.net/npm/nanoid/nanoid.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo"><img src="b-06-09-2025.png" alt="BOLOGOX logo"></div>
+      <div class="title">BOLOGOX — Home</div>
+    </div>
+    <div class="search">
+      <input id="search" placeholder="Pesquisar" />
+    </div>
+    <div class="actions">
+      <button id="createBtn" class="btn ghost">Criar</button>
+      <button id="profileBtn" class="btn">Entrar</button>
+    </div>
+  </header>
+
+  <!-- add hidden file input for uploads -->
+  <input id="uploadHtml" type="file" accept=".html,.js,text/html,application/javascript" style="display:none" />
+  <!-- studio container (injected/used by JS) -->
+
+  <main class="container">
+    <section class="hero">
+      <h1>Jogos em destaque</h1>
+      <p>Uma tela inspirada na home do Roblox — apenas um mapa em branco como pedido.</p>
+    </section>
+
+    <section class="grid" id="gameGrid">
+      <!-- Cards gerados por JS -->
+    </section>
+  </main>
+
+  <template id="cardTpl">
+    <article class="card">
+      <div class="thumbnail">
+        <img src="blank_map.png" alt="Mapa em branco">
+      </div>
+      <div class="meta">
+        <h3 class="name">Nome do Jogo</h3>
+        <div class="info">
+          <span class="players">0 jogadores</span>
+          <span class="likes">0 👍</span>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="play">Jogar</button>
+      </div>
+    </article>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
